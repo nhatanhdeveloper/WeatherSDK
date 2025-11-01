@@ -19,6 +19,10 @@ SDK Android để lấy thông tin dự báo thời tiết từ [Open-Meteo API]
 
 ## Cài đặt
 
+### Yêu cầu trước
+
+Trước khi sử dụng, bạn cần publish SDK lên GitHub và JitPack. Xem hướng dẫn chi tiết trong [PUBLISH.md](PUBLISH.md).
+
 ### Gradle (Kotlin DSL)
 
 Thêm vào `build.gradle.kts` (Project level):
@@ -26,6 +30,8 @@ Thêm vào `build.gradle.kts` (Project level):
 ```kotlin
 allprojects {
     repositories {
+        google()
+        mavenCentral()
         maven { url = uri("https://jitpack.io") }
     }
 }
@@ -35,7 +41,7 @@ Thêm dependency vào `build.gradle.kts` (App level):
 
 ```kotlin
 dependencies {
-    implementation("com.github.YOUR_USERNAME:WeatherSDK:VERSION_TAG")
+    implementation("com.github.nhatanhdeveloper:WeatherSDK:1.0.0")
 }
 ```
 
@@ -46,6 +52,8 @@ Thêm vào `build.gradle` (Project level):
 ```groovy
 allprojects {
     repositories {
+        google()
+        mavenCentral()
         maven { url 'https://jitpack.io' }
     }
 }
@@ -55,11 +63,14 @@ Thêm dependency vào `build.gradle` (App level):
 
 ```groovy
 dependencies {
-    implementation 'com.github.YOUR_USERNAME:WeatherSDK:VERSION_TAG'
+    implementation 'com.github.nhatanhdeveloper:WeatherSDK:1.0.0'
 }
 ```
 
-**Lưu ý:** Thay `YOUR_USERNAME` bằng tên GitHub của bạn và `VERSION_TAG` bằng tag version bạn muốn sử dụng (ví dụ: `1.0.0`).
+**Lưu ý:** 
+- Thay `nhatanhdeveloper` bằng tên GitHub của bạn
+- Thay `1.0.0` bằng tag version bạn đã publish (ví dụ: `v1.0.0` hoặc `1.0.0`)
+- Có thể sử dụng `-SNAPSHOT` cho version đang phát triển: `1.0.0-SNAPSHOT`
 
 ## Kiến trúc
 

@@ -3,6 +3,9 @@ plugins {
     id 'org.jetbrains.kotlin.android'
 }
 
+group = 'com.github.nhatanhdeveloper'
+version = '1.0.0'
+
 android {
     namespace 'com.lusa.weathersdk'
     compileSdk 36
