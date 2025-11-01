@@ -1,5 +1,5 @@
 plugins {
-    id 'com.android.application'
+    id 'com.android.library'
     id 'org.jetbrains.kotlin.android'
 }
 
@@ -8,13 +8,14 @@ android {
     compileSdk 36
 
     defaultConfig {
-        applicationId "com.lusa.weathersdk"
         minSdk 24
         targetSdk 36
         versionCode 100
         versionName "1.0.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        
+        consumerProguardFiles "consumer-rules.pro"
     }
 
     buildTypes {
