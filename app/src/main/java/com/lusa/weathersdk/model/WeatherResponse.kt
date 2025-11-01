@@ -1,6 +1,6 @@
 package com.lusa.weathersdk.model
 
-import com.google.gson.annotations.SerializedName
+import com.google.gson.annotations.*
 
 data class WeatherResponse(
     val latitude: Double,
